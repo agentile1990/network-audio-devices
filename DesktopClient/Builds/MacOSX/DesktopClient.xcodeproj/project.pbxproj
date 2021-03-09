@@ -137,6 +137,13 @@
 			path = "/Users/andrew.gentile/Developer/JUCE/modules/juce_data_structures";
 			sourceTree = "<absolute>";
 		};
+		2FB2E8C98E9F58A8D056476B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MainComponent.h;
+			path = ../../Source/MainComponent.h;
+			sourceTree = "SOURCE_ROOT";
+		};
 		34066BDBB9D9F57EE92B77D8 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
@@ -379,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				6F8829380E2524D184313959,
+				2FB2E8C98E9F58A8D056476B,
 			);
 			name = Source;
 			sourceTree = "<group>";
