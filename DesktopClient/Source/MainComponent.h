@@ -15,17 +15,35 @@
 //==============================================================================
 /*
 */
-class MainComponent  : public juce::Component
+class MainComponent  : public juce::AudioAppComponent
 {
+private:
+    int kNumOutputChannels{2};
+    
 public:
     MainComponent()
     {
-        // Constructor
+        setAudioChannels(0, kNumOutputChannels);
     }
     
     ~MainComponent() override
     {
-        // Destructor
+        shutdownAudio();
+    }
+    
+    void prepareToPlay(int samplesPerBlockExpected, double sampleRate) override
+    {
+        // Do nothing
+    }
+    
+    void getNextAudioBlock(const juce::AudioSourceChannelInfo &bufferToFill) override
+    {
+        bufferToFill.clearActiveBufferRegion();
+    }
+    
+    void releaseResources() override
+    {
+        // Do nothing
     }
 
 private:
